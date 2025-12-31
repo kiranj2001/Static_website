@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    padding-top: 6vw;
+}
+
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    height: 6vw;
+    width: 100%;
+    background-image: linear-gradient(red, red,red, red, red, red);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo a img{
+    padding-left: 1.5vw;
+    height: 4vw;
+    width: 7vw;
+}
+
+.navbar-links{
+    gap: 2.5vw;
+    display: flex;
+    align-items: center;
+    border-left: 0.09vw solid white;
+}
+
+.navbar-links a{
+    text-decoration: none;
+    color: white;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    font-size: 1.75vw;
+    font-weight: 700;
+    font-family: "Doto", sans-serif;
+    letter-spacing: .1vw;
+    border-left: 0.09vw solid white;
+    border-right: 0.09vw solid white;
+}
+
+.signin-up{
+    padding-right: 2vw;
+}
+
+.signin-up button{
+    width: 7vw;
+    height: 3vw;
+    background: black;
+    color: white;
+    border-radius: 2vw;
+    border: none;
+    font-size: 1.1vw;
+    font-weight: 700;
+    font-family: "Doto", sans-serif;
+}
+
+.signin-up button:hover{
+    background: white;
+    color: black;
+    cursor: crosshair;
+}
+
+.navbar-links a:hover{
+    color: black;
+    cursor: crosshair;
+}
+
+.navbar-logo a img:hover{
+    cursor: crosshair;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 14vw;
+    box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.2);
+    z-index: 1001;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.5vw;
+    overflow: hidden;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar-links .dropdown-content a {
+    color: black;
+    padding: 1vw;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1vw;
+    font-weight: normal;
+    font-family: sans-serif;
+    border: none;
+    text-align: left;
+    letter-spacing: normal;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar-links .dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.navbar-links .dropdown-content a:hover {
+    background-color: #ffe6e6;
+    color: red;
+    transform: none;
+}
+
+.cursoule_container{
+    padding: 2rem;
+    background-image: conic-gradient(red,red,#f85050,red,red,red,red,#f85050,red,red);
+    padding: 4vw 2vw;
+    background: linear-gradient(135deg, #000000, #5a0000);
+}
+
+.cursoule-wrapper{
+    position: relative;
+    max-width: 65rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    border-width: 1rem;
+    border-style: solid;
+    border-image: linear-gradient(90deg,black, black,red);
+    border-radius: 1.5vw;
+    box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    border: 2px solid rgba(255, 0, 0, 0.3);
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem 1rem rgba(0, 0, 0, 0.5);
+    scrollbar-width: none;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 2.5rem;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+.slider-nav a{
+    width: 1rem;
+    height: 0.5rem;
+    border-radius: 25%;
+    background-image: linear-gradient(90deg,black, black,red);
+    transition: all 1s ease-in-out;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.slider-nav a:hover{
+    background-image: linear-gradient(90deg,red,red,black);
+    cursor: context-menu;
+    transition: all 1s ease-in-out;
+    background-color: red;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.about-container{
+    width: 100%;
+    height: 30vw;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20vw;
+}
+
+.about-text{
+    padding-left: 10vw;
+    width: 150%;
+}
+
+.about-text h2{
+    font-size: 3vw;
+    padding-bottom: 1rem;
+    
+    font-family: "Doto", sans-serif;
+}
+
+.about-text h2:hover{
+    cursor: pointer;
+    color: white;
+    transition: all 1s ease-in-out;
+    font-weight: 700;
+}
+
+.about-text p{
+    font-size: 1.2vw;
+    padding-bottom: 1rem;
+    word-spacing: 1rem;
+}
+
+.about-img img{
+    height: 100%;
+    width: 60%;
+}
+
+.slidder{
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    background-image: radial-gradient(black,black,black, black, red);
+}
+
+.slidder h2{
+    font-size: 3vw;
+    padding-bottom: 1rem;
+    font-family: "Doto", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.slidder h2:hover{
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+    transition: all 1s ease-in-out;
+    font-weight: 700;
+}
+
+.Servies-container{
+    margin: 1vw auto;
+    width: 90%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 1vw;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    animation: spin 25s linear infinite;
+    padding-right: 1vw;
+}
+
+.group1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    animation: spin 25s linear infinite;
+    padding-right: 1vw;
+}
+
+.group a, .group1 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);;
+}
+
+.card{
+    flex: 0 0 19vw;
+    height: 17vw;
+    width: 19vw;
+    padding: 1vw;
+    background-image: conic-gradient(red, rgb(255, 255, 255), white, red);
+    border-radius: 1em;
+    font-size: 1vw;
+    text-align: center;
+    align-content: center;
+    
+}
+
+.card p{
+    font-size: 2vw;
+    font-weight: 700;
+    font-family: "Nova Square", sans-serif;
+}
+
+.Servies-container::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes spin {
+    from{
+        translate: 0;
+    } to{
+        translate: -100%;
+    }
+}
+
+@keyframes spin1 {
+    from{
+        translate: 0;
+    } to{
+        translate: 100%;
+    }
+}
+
+.footer{
+    width: 100%;
+    height: 20vw;
+    background-image: linear-gradient(red, red, red, white);
+}
+
+.con-det{
+    display: flex;
+    gap: 15vw;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+    padding-bottom: 3vw;
+    padding-top: 1vw;
+}
+
+.contact h2, .mail h2{
+    font-size: 2vw;
+    padding-bottom: 0.5rem;
+    font-family: "Doto", sans-serif ;
+}
+
+.social{
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    padding-top: 2vw;
+    border-top: 1px solid black;
+}
+
+.social h2{
+    font-size: 2vw;
+    padding-bottom: 0.5rem;
+    font-family: "Doto", sans-serif ;
+}
+
+.scid{
+    height: 2vw;
+    width: 2vw;
+}
+
+/* Analytics Page Styles */
+.service-page {
+    padding: 4vw 5vw;
+    background-color: #fff;
+    min-height: 80vh;
+}
+
+.service-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vw;
+}
+
+.service-info {
+    flex: 1;
+}
+
+.service-info h1 {
+    font-size: 4vw;
+    font-family: "Doto", sans-serif;
+    color: red;
+    margin-bottom: 1.5vw;
+}
+
+.service-info > p {
+    font-size: 1.3vw;
+    line-height: 1.6;
+    margin-bottom: 3vw;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5vw;
+}
+
+.feature-box {
+    padding: 1.5vw;
+    background: #f9f9f9;
+    border-radius: 0.8vw;
+    border-left: 0.4vw solid red;
+    box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-0.5vw);
+    background: #fff0f0;
+}
+
+.feature-box h3 {
+    font-family: "Nova Square", sans-serif;
+    font-size: 1.3vw;
+    margin-bottom: 0.5vw;
+}
+
+.feature-box p {
+    font-size: 1vw;
+    color: #555;
+}
+
+.service-visual {
+    flex: 1;
+}
+
+.service-visual img {
+    width: 100%;
+    border-radius: 1.5vw;
+    box-shadow: 1vw 1vw 3vw rgba(0,0,0,0.2);
+}
+
+.demo-btn {
+    margin-top: 2.5vw;
+    padding: 1vw 2.5vw;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2vw;
+    font-size: 1.2vw;
+    font-family: "Doto", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.demo-btn:hover {
+    background-color: black;
+    transform: scale(1.05);
+}
+
+/* News Page Styles */
+.news-page {
+    padding: 4vw 5vw;
+    background-color: #fff;
+    min-height: 80vh;
+}
+
+.news-container h1 {
+    font-size: 4vw;
+    font-family: "Doto", sans-serif;
+    color: red;
+    margin-bottom: 1vw;
+    text-align: center;
+}
+
+.news-intro {
+    text-align: center;
+    font-size: 1.3vw;
+    margin-bottom: 4vw;
+    color: #555;
+    font-family: sans-serif;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    gap: 2vw;
+}
+
+.news-card {
+    background: #f9f9f9;
+    padding: 2vw;
+    border-radius: 1vw;
+    border-top: 0.5vw solid red;
+    box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-0.5vw);
+}
+
+.news-date {
+    display: block;
+    font-size: 0.9vw;
+    color: #888;
+    margin-bottom: 0.5vw;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.news-card h3 {
+    font-family: "Nova Square", sans-serif;
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+    color: #000;
+}
+
+.news-card p {
+    font-size: 1.1vw;
+    color: #444;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+/* Auth Page Styles */
+.auth-page {
+    padding: 4vw 5vw;
+    background-color: #fff;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.auth-container {
+    width: 35vw;
+    background: #f9f9f9;
+    padding: 3vw;
+    border-radius: 1vw;
+    box-shadow: 0 1vw 3vw rgba(0,0,0,0.1);
+    border-top: 0.5vw solid red;
+    text-align: center;
+}
+
+.auth-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vw;
+    border-bottom: 1px solid #ddd;
+}
+
+.auth-toggle button {
+    background: none;
+    border: none;
+    padding: 1vw 2vw;
+    font-size: 1.2vw;
+    font-family: "Doto", sans-serif;
+    cursor: pointer;
+    color: #555;
+    border-bottom: 0.3vw solid transparent;
+    transition: all 0.3s ease;
+}
+
+.auth-toggle button:hover {
+    color: red;
+}
+
+.auth-toggle button.active {
+    color: red;
+    border-bottom: 0.3vw solid red;
+    font-weight: 700;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.form-wrapper input {
+    padding: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    font-family: sans-serif;
+    outline: none;
+}
+
+.form-wrapper input:focus {
+    border-color: red;
+}
+
+.form-wrapper button {
+    padding: 1vw;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+    font-family: "Doto", sans-serif;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 700;
+}
+
+.form-wrapper button:hover {
+    background-color: red;
+}
+
+.form-footer {
+    margin-top: 1.5vw;
+    font-size: 0.9vw;
+    font-family: sans-serif;
+    color: #666;
+}
+
+.form-footer a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
